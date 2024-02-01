@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS blogUser_db;
-CREATE DATABASE blogUser_db;
+DROP DATABASE IF EXISTS anotherstreasure_db;
+CREATE DATABASE anotherstreasure_db;
 -- change DB name

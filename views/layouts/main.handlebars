@@ -11,8 +11,20 @@
 <body>
   <header class="display-flex justify-space-between align-center p-2">
     <h1>
-      
+      Anothers Treasure
     </h1>
+    
+    <nav>
+    {{#if logged_in}}
+      <button class="btn" id="logout">logout</button>
+      {{else}}
+      <button class="btn" id="login">login</button>
+    {{/if}}
+    </nav>
+
+    
+
+    
     
   </header>
   <main>
