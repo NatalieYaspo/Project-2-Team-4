@@ -4,6 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
+const cloudinary = require('cloudinary').v2;
 
 const sequelize = require('./config/connection');
 
@@ -25,6 +26,11 @@ const sess = {
     db: sequelize
   })
 };
+
+//This is to configure cloudinary utility
+cloudinary.config({
+  secure: true
+});
 
 // Add express-session and store as Express.js middleware
 app.use(session(sess));
