@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes'); //CHANGE TO NAME OF ROUTES
-const blogPostRoutes = require('./blogPostRoutes'); //CHANGE TO NAME OF ROUTES
+const userRoutes = require('./userRoutes'); 
+const postRoutes= require('/.postRoutes'); 
 
-router.use('/users', userRoutes); //CHANGE TO NAME OF ROUTES
-router.use('/blogPosts', blogPostRoutes); //CHANGE TO NAME OF ROUTES
+router.use('/users', userRoutes); 
+router.use('/post', postRoutes); 
 
 module.exports = router;
