@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection');
-const { User, BlogPost } = require('../models'); //CHANGE TO NAMES OF MODELS
+const { User, Post } = require('../models'); // Names of the models
 
-const userData = require('./userData.json');//CHANGE TO NAMES OF MODELS
-const blogData = require('./blogPosts.json');//CHANGE TO NAMES OF MODELS
+const userData = require('./user.json'); // Corrected thename with user data
+const postData = require('./post.json'); // Corrected the name with post data
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,7 +12,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await BlogPost.bulkCreate(blogData, {
+  await Post.bulkCreate(postData, { // Corrected from postData to Post
     individualHooks: true,
     returning: true,
   });
