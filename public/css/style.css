@@ -22,6 +22,10 @@ body{
     background-attachment: fixed;
 }
 
+.row{
+    padding-left: 20px;
+}
+
 h1{
     text-align: center;
     justify-content: center;
@@ -123,6 +127,7 @@ nav{
     display: block;
     margin-top: 0em;
     box-sizing: border-box;
+    justify-content: center;
 }
 
 form .form-imput{
@@ -230,4 +235,12 @@ a{
     border-radius: 17px;
     padding-left: 7px;
     color: grey;
+}
+
+#name{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
 }
