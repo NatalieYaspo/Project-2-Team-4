@@ -1,0 +1,25 @@
+[
+    {
+      "user_id": 1,
+      "name": "The Doctor",
+      "email": "thedoctor@tardis.com",
+      "password": "sonicScrewdriver",
+      "location": "Gallifrey"
+    },
+    {
+      "user_id": 2,
+      "name": "Rose Tyler",
+      "email": "rosetyler@earth.com",
+      "password": "badWolf",
+      "location": "London, Earth"
+    },
+    {
+      "user_id": 3,
+      "name": "Donna Noble",
+      "email": "donnanoble@earth.com",
+      "password": "allonsy",
+      "location": "Chiswick, London, Earth"
+    }
+  ]
+  
+  
