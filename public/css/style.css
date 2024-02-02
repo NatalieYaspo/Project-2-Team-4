@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex; 
+    justify-content: space-between;
+    padding: 0.625rem;
+    text-align: center;
+
+
+}
+
+body{
+    margin: 20px auto;
+    font-family: 'Lucida Sans';
+    background: #fff;
+    background-image: url('bulletin-board-325721_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 2rem;
+}
+h3{
+    text-align: center;
+    justify-content: center;
+}
+
+p{
+    font-family: 'Lucida Sans';
+    font-size: 1rem;
+}
+
+ul li{
+    list-style: none;
+    margin: 1em
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+    background: #D4E4BC;
+    display: block;
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+    transform: rotate(-6deg);
+    transition: transfrom .15s linear;
+}
+
+ul li:nth-child(even) a{
+    transform: rotate(4deg);
+    position: relative;
+    background: #9883E5;
+    top: 5px;
+}
+
+ul li:nth-child(3n) a{
+    transform: rotate(-3deg);
+    position: relative;
+    background: #ff88dc;
+    top: -5px;
+}
+
+ul li:nth-child(5n) a{
+    transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+   
+}
+
+ul li a:hover,
+ul li a:focus{
+    box-shadow: 10px 10px 7px rgba(33, 33, 33,.7);
+    transform: scale(1.25);
+    position: relative;
+    z-index: 5;
+
+}
+
+nav{
+    display: block;
+}
+
+.btn {
+    text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1a1a1a;
+    background-color: #aeaeae;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #cecece;
+  }
+
+  form{
+    width: 100%;
+    display: block;
+    margin-top: 0em;
+    box-sizing: border-box;
+}
+
+form .form-imput{
+    width: 100%;
+    padding: 0.75rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    margin: 0.625rem 0;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+    display: block;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color:#6abadeba;
+    font-family: 'Arial';
+}
+.login{
+        width: 382px;
+        overflow: hidden;
+        margin: auto;
+        margin: 20 0 0 450px;
+        padding: 80px;
+        background: #343838;
+        border-radius: 15px ;
+
+}
+h2.login{
+    text-align: center;
+    color: #d79999;
+    padding: 20px;
+}
+label{
+    color: #ffffff;
+    font-size: 17px;
+}
+#Uname{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+}
+#Pass{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+
+}
+#log{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: #343838;
+
+
+}
+span{
+    color: white;
+    font-size: 17px;
+}
+a{
+    float: right;
+    background-color: grey;
+}
+.container{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-bar{
+    width: 1000%;
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    background: white;
+}
+
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: grey;
+}
+
+.search-button{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: grey;
+}
