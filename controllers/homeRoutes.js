@@ -2,6 +2,8 @@ const router = require('express').Router();
 const { Post, User } = require('../models'); // Updated reference to "Post" model
 const withAuth = require('../utils/auth');
 
+
+//Go to homepage and pulls through all active posts
 router.get('/', async (req, res) => {
   try {
     // Get all posts and JOIN with user data
@@ -27,6 +29,8 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+//Pulls up one post by id
 router.get('/posts/:id', async (req, res) => { // Updated route path
   try {
     const postData = await Post.findByPk(req.params.id, {
