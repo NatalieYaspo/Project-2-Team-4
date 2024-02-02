@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,21 +13,24 @@
     <h1>
       Anothers Treasure
     </h1>
-    
-    {{#if logged_in}}
+
+
     <nav>
+      {{#if logged_in}}
       <button class="btn" id="logout">logout</button>
+      {{/if}}
+      <button class="btn" id="login">login</button>
     </nav>
-    {{/if}}
+
 
   </header>
   <main>
     {{{ body }}}
   </main>
   <footer>
-      
+
   </footer>
-    {{#if logged_in}}
+  {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
 
