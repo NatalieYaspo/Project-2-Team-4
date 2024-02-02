@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,23 +10,15 @@
 </head>
 
 <body>
-  <header class="display-flex justify-space-between align-center p-2">
+  <header>
     <h1>
       Anothers Treasure
     </h1>
     
     <nav>
-    {{#if logged_in}}
       <button class="btn" id="logout">logout</button>
-      {{else}}
-      <button class="btn" id="login">login</button>
-    {{/if}}
     </nav>
 
-    
-
-    
-    
   </header>
   <main>
     {{{ body }}}
@@ -33,6 +26,9 @@
   <footer>
       
   </footer>
+    {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 
 </body>
 
