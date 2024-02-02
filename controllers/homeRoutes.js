@@ -27,7 +27,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/post/:id', async (req, res) => { // Updated route path
+router.get('/posts/:id', async (req, res) => { // Updated route path
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -40,7 +40,7 @@ router.get('/post/:id', async (req, res) => { // Updated route path
 
     const post = postData.get({ plain: true }); // Updated variable name
 
-    res.render('post', { // Updated template name
+    res.render('posts', { // Updated template name
       ...post,
       logged_in: req.session.logged_in,
     });
