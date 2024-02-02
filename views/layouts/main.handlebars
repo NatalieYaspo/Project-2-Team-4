@@ -14,14 +14,16 @@
       Anothers Treasure
     </h1>
 
-
     <nav>
       {{#if logged_in}}
       <button class="btn" id="logout">logout</button>
+      <button class="btn" id="profile"><a href="/profile">profile</a></button>
       {{/if}}
-      <button class="btn" id="login">login</button>
+      {{!-- {{#if logged_in:false}} --}}
+      {{!-- not sure if this is working how I want it to yet (ny) --}}
+      <button class="btn" id="login"><a href="/login">login</a></button>
+      {{!-- {{/if}} --}}
     </nav>
-
 
   </header>
   <main>
