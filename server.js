@@ -19,7 +19,7 @@ const hbs = exphbs.create({ helpers });
 // Configure and link a session object with the sequelize store
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: {}, //add info here to logout when not in use?
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
