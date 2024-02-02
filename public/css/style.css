@@ -33,7 +33,7 @@ h1{
 
 h2{
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 18px;
 }
 h3{
     text-align: center;
@@ -42,7 +42,7 @@ h3{
 
 p{
     font-family: 'Lucida Sans';
-    font-size: 1rem;
+    font-size: 12px;
 }
 
 ul li{
@@ -259,6 +259,24 @@ a{
 }
 
 #name{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
+#post-desc{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
+#post-title{
     width: 400px;
     height: 30px;
     border: none;

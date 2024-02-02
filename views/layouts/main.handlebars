@@ -16,13 +16,11 @@
 
     <nav>
       {{#if logged_in}}
-      <button class="btn" id="logout">logout</button>
+      <button class="btn" id="logout"><a href="/login">logout</a></button>
       <button class="btn" id="profile"><a href="/profile">profile</a></button>
-      {{/if}}
-      {{!-- {{#if logged_in:false}} --}}
-      {{!-- not sure if this is working how I want it to yet (ny) --}}
+      {{else}}
       <button class="btn" id="login"><a href="/login">login</a></button>
-      {{!-- {{/if}} --}}
+      {{/if}}
     </nav>
 
   </header>
