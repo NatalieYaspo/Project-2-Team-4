@@ -1,0 +1,24 @@
+[
+    {
+      "post_id": 1,
+      "title": "Sonic Screwdriver Replica Giveaway",
+      "description": "Fez up for grabs! Fezzes ARE cool.",
+      "likes": 10,
+      "user_id": 1
+    },
+    {
+      "post_id": 2,
+      "title": "TARDIS blue scarf Giveaway",
+      "description": "Free TARDIS-blue scarf for your cold adventures.",
+      "likes": 15,
+      "user_id": 2
+    },
+    {
+      "post_id": 3,
+      "title": "Free (empty) Adipose Necklace",
+      "description": "Well, lucky day for you! This fancy necklace isn't my cup of tea, but it could be yours for free! Imagine that, getting something shiny without spending a quid. Go on, grab it and make your day a bit more sparkly!",
+      "likes": 8,
+      "user_id": 3
+    }
+  ]
+  
