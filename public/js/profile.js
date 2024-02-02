@@ -6,12 +6,14 @@ const newFormHandler = async (event) => {
 
   if (title && description) {
     const response = await fetch(`/api/posts`, {
+      
       method: 'POST',
       body: JSON.stringify({ title, description }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
+    console.log(response);
 
     if (response.ok) {
       document.location.replace('/profile');
@@ -38,9 +40,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-project-form')
+  .querySelector('.new-post-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.post-list')
   .addEventListener('click', delButtonHandler);
