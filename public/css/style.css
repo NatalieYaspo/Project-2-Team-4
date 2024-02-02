@@ -168,7 +168,7 @@ label{
     color: #ffffff;
     font-size: 17px;
 }
-#Uname{
+#email-login{
     width: 400px;
     height: 30px;
     border: none;
@@ -177,15 +177,33 @@ label{
     margin-bottom: 4px;
 }
 
-#Pass{
+#email-signup{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-bottom: 4px; 
+}
+
+#password-login{
     width: 400px;
     height: 30px;
     border: none;
     border-radius: 3px;
     padding-left: 8px;
     margin-bottom: 4px;
-
 }
+
+#password-signup{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
 #log{
     width: 400px;
     height: 30px;
