@@ -57,11 +57,12 @@ router.get('/posts/:id', async (req, res) => { // Updated route path
 router.get('/profile', withAuth, async (req, res) => {
   try {
     // Find the logged-in user based on the session ID
+    // console.log(req.session);
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: Post }], // Updated reference to "Post" model
     });
-
+    // console.log(userData);
     const user = userData.get({ plain: true });
 
     res.render('profile', {
@@ -69,6 +70,7 @@ router.get('/profile', withAuth, async (req, res) => {
       logged_in: true,
     });
   } catch (err) {
+    // console.log(err);
     res.status(500).json(err);
   }
 });

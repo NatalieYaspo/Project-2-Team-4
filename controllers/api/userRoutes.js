@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const session = require('express-session');
 const { User } = require('../../models');
 
 //Create a user
@@ -38,11 +39,11 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-
+    // console.log(userData);
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.user_id;
       req.session.logged_in = true;
-      
+      // console.log('You are now logged in!', req.session);
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
