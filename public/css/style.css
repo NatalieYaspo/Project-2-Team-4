@@ -16,7 +16,7 @@ body{
     margin: 20px auto;
     font-family: 'Lucida Sans';
     background: #fff;
-    background-image: url('bulletin-board-325721_1280.jpg');
+    background-image: url('../images/bulletin-board-325721_1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
