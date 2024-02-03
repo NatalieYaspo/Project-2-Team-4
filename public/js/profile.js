@@ -29,10 +29,12 @@ const newFormHandler = async (event) => {
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
+    // console.log('button id: ', id);
 
     const response = await fetch(`/api/posts/${id}`, {
       method: 'DELETE',
     });
+    console.log(response);
 
     if (response.ok) {
       document.location.replace('/profile');
