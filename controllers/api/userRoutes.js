@@ -8,10 +8,10 @@ router.post('/', async (req, res) => {
     const userData = await User.create(req.body);
 
     req.session.save(() => {
-      req.session.user_id = userData.id;
+      req.session.user_id = userData.dataValues.user_id;
       req.session.logged_in = true;
-
-      res.status(200).json(userData);
+      // need to add location
+      res.status(200).json({ user: userData, message: 'You are now logged in!' });
     });
   } catch (err) {
     res.status(400).json(err);
