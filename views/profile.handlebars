@@ -4,7 +4,36 @@
   </div>
 </div>
 
-<div class="row mt-4">
+{{!-- form to update a blog post once button is pushed --}}
+<div class="container update hide">
+
+  <div class="card text-bg-secondary mb-3 m-2" style="max-width: 80%">
+    <h5 class="card-header text-bg-secondary mb-3">UPDATE Blog</h5>
+
+    <div class="card-body text-bg-light mb-3">
+      <form class="form update-form">
+        <div class="card-body text-bg-light mb-4">
+          <div class="form-group">
+            <label for="post-title"></label>
+            <input class="form-input" type="text" id="post-title" name="post-title" placeholder="Post Title" />
+          </div>
+          <div class="form-group">
+            <label for="post-desc"></label>
+            <textarea class="form-input" id="post-desc" name="post-desc" placeholder="Item Description"></textarea>
+          </div>
+          <div class="form-group m-2">
+            <button type="submit" id="submit-update-btn" class="btn btn-primary" data-id="{{post.post_id}}">Submit
+              Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{{!-- Create a new post form --}}
+<div class="row mt-4 new-post">
   <div class="col-md-6">
     <h3>Create a New Post:</h3>
 
@@ -18,28 +47,38 @@
         <textarea class="form-input" id="post-desc" name="post-desc" placeholder="Item Description"></textarea>
       </div>
       <div class="form-group">
+        <label for="upload-img-form"></label>
+        <filetype class="form-input" id="upload-img-form" name="upload-img-form" placeholder="Upload an Image">
+        </filetype>
+      </div>
+      <div class="form-group">
         <button type="submit" class="btn btn-primary">Create</button>
       </div>
     </form>
   </div>
 </div>
 
-  {{!-- {{#if posts.length}} --}}
-  <div class="col-md-6">
-    <h3>My Posts:</h3>
+{{!-- {{#if posts.length}} --}}
+<div class="col-md-6">
+  <h3>My Posts:</h3>
 
-    {{#each posts as |post|}}
-    <div class="row mb-2 post-list">
-      <div class="col-md-8">
-        <h4><a href="/posts/{{post.post_id}}">{{post.title}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.post_id}}">DELETE</button>
-      </div>
+  {{#each posts as |post|}}
+  <div class="row mb-2 post-list">
+    <div class="col-md-8">
+      <h4><a href="/posts/{{post.post_id}}">{{post.title}}</a></h4>
     </div>
-    {{/each}}
+    <div class="col-md-4">
+      <button class="btn btn-sm update-btn" data-id="{{post.post_id}}">UPDATE</button>
+    </div>
+    <div class="col-md-4">
+      <button class="btn btn-sm delete-btn" data-id="{{post.post_id}}">DELETE</button>
+    </div>
   </div>
-  {{!-- {{/if}} --}}
+  {{/each}}
+</div>
+{{!-- {{/if}} --}}
+
+
 
 
 <script src="./js/profile.js"></script>

@@ -2,6 +2,29 @@ const router = require('express').Router();
 const { Post, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//Pulls up one post by id
+router.get('/posts/:id', withAuth, async (req, res) => { 
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name', 'email'],
+        },
+      ],
+    });
+
+    const post = postData.get({ plain: true }); 
+
+    res.render('posts', { 
+      ...post,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //Create a new post
 router.post('/', withAuth, async (req, res) => {
   try {
