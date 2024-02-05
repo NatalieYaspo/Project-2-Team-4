@@ -4,19 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Another's Treasure</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <header>
     <h1>
-      Another's Treasure
+    <div class="container">
+   <a href="/">
+  <img src="/images/anothersTreasureLogo.png" alt="home" style="height: 40px; width: 40px;"> </a>
+ 
+</div>
     </h1>
 
     <nav>
       {{#if logged_in}}
-      <button class="btn" id="homepage"><a href="/">home</a></button>
       <button class="btn" id="logout"><a href="/">logout</a></button>
       <button class="btn" id="profile"><a href="/profile">profile</a></button>
       {{else}}

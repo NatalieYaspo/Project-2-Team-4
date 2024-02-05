@@ -12,6 +12,7 @@ header{
 
 }
 
+
 body{
     margin: 20px auto;
     font-family: 'Lucida Sans';
@@ -60,7 +61,7 @@ ul{
     justify-content: center;
 }
 
-ul li a{
+ul li a, .stickyNote{
     text-decoration: none;
     color: #000;
     background: #D4E4BC;
@@ -144,6 +145,7 @@ form .form-imput{
     border: 1px solid #484848;
     border-radius: 0.3rem;
     display: block;
+    
 }
 
 body
@@ -287,4 +289,65 @@ a{
     border-radius: 3px;
     padding-left: 8px;
     margin-bottom: 4px;
+}
+
+#upload-img-form{
+    width: 400px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+    margin-bottom: 4px;
+}
+
+.delete-btn{
+    text-align: center;
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 0;
+    text-decoration: none;
+    font-size: .75rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1a1a1a;
+    background-color: #aeaeae;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    display: block;
+}
+
+.update-btn{
+    text-align: center;
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 0;
+    text-decoration: none;
+    font-size: .75rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1a1a1a;
+    background-color: #aeaeae;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    display: block;
+}
+.bigStickyNote{
+    text-decoration: none;
+    color: #000;
+    background: #D4E4BC;
+    display: block;
+    height: 40em;
+    width: 40em;
+    padding: 1em;
+    box-shadow: 7px 7px 8px rgba(33, 33, 33, .7);
+    margin: auto;
+    padding: 10px;
+}
+
+.post-description{
+    font-size: 20px;
+}
+
+.post-title{
+    font-size: 25px;
 }
