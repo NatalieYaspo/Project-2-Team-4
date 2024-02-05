@@ -313,7 +313,9 @@ a{
     color: #1a1a1a;
     background-color: #aeaeae;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    display: block;
+    position: absolute;
+    left:50%;
+    bottom:2px;
 }
 
 .update-btn{
@@ -329,7 +331,10 @@ a{
     color: #1a1a1a;
     background-color: #aeaeae;
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    display: block;
+    position:absolute; 
+    margin-left:-50px;
+    left:40%;
+    bottom: 2px;
 }
 .bigStickyNote{
     text-decoration: none;
@@ -350,4 +355,12 @@ a{
 
 .post-title{
     font-size: 25px;
+}
+
+.logo{
+    background-color: transparent;
+}
+
+.anothersTreasure{
+    font-size: 40px;
 }
