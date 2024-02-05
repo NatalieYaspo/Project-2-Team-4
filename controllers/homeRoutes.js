@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models'); // Updated reference to "Post" model
+const { Post, User } = require('../models'); 
 const withAuth = require('../utils/auth');
 
 
@@ -7,21 +7,21 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // Get all posts and JOIN with user data
-    const postData = await Post.findAll({ // Updated reference to "Post" model
+    const postData = await Post.findAll({
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['name', 'email'],
         },
       ],
     });
 
     // Serialize data so the template can read it
-    const posts = postData.map((post) => post.get({ plain: true })); // Updated variable name
+    const posts = postData.map((post) => post.get({ plain: true })); 
 
     // Pass serialized data and session flag into template
     res.render('homepage', {
-      posts, // Updated variable name
+      posts, 
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -31,20 +31,20 @@ router.get('/', async (req, res) => {
 
 
 //Pulls up one post by id
-router.get('/posts/:id', async (req, res) => { // Updated route path
+router.get('/posts/:id', withAuth, async (req, res) => { 
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
         {
           model: User,
-          attributes: ['name'],
+          attributes: ['name', 'email'],
         },
       ],
     });
 
-    const post = postData.get({ plain: true }); // Updated variable name
+    const post = postData.get({ plain: true }); 
 
-    res.render('posts', { // Updated template name
+    res.render('posts', { 
       ...post,
       logged_in: req.session.logged_in,
     });
@@ -60,7 +60,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // console.log(req.session);
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Post }], // Updated reference to "Post" model
+      include: [{ model: Post }], 
     });
     // console.log(userData);
     const user = userData.get({ plain: true });

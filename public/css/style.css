@@ -22,6 +22,10 @@ body{
     background-attachment: fixed;
 }
 
+.hide {
+    display: none;
+}
+
 .row{
     padding-left: 20px;
 }
