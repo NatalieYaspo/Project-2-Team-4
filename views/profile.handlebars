@@ -5,10 +5,10 @@
 </div>
 
 {{!-- form to update a blog post once button is pushed --}}
-{{!-- <div class="container update hide">
+<div class="container update hide">
 
   <div class="card text-bg-secondary mb-3 m-2" style="max-width: 80%">
-    <h5 class="card-header text-bg-secondary mb-3">UPDATE Blog</h5>
+    <h3 class="card-header text-bg-secondary mb-3">UPDATE Blog:</h3>
 
     <div class="card-body text-bg-light mb-3">
       <form class="form update-form">
@@ -30,9 +30,10 @@
     </div>
   </div>
 
-</div> --}}
+</div>
 
 {{!-- Create a new post form --}}
+<div class="container new post">
 <div class="row mt-4 new-post">
   <div class="col-md-6">
     <h3>Create a New Post:</h3>
@@ -56,24 +57,28 @@
     </form>
   </div>
 </div>
+</div>
+
 
 {{!-- {{#if posts.length}} --}}
+<div class="container my post">
 <div class="col-md-6">
   <h3>My Posts:</h3>
 
   {{#each posts as |post|}}
-  <div class="row mb-2 post-list">
+  <div class="row mb-2 post-list stickyNote">
     <div class="col-md-8">
       <h4><a href="/posts/{{post.post_id}}">{{post.title}}</a></h4>
     </div>
-    {{!-- <div class="col-md-4">
+     <div class="col-md-4">
       <button class="btn btn-sm update-btn" data-id="{{post.post_id}}">UPDATE</button>
-    </div> --}}
+    </div> 
     <div class="col-md-4">
       <button class="btn btn-sm delete-btn" data-id="{{post.post_id}}">DELETE</button>
     </div>
   </div>
   {{/each}}
+</div>
 </div>
 {{!-- {{/if}} --}}
 
