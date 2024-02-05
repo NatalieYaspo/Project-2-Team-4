@@ -1,5 +1,5 @@
 <div class="container">
-  <form action="" class="search-bar">
+   <form action="/search" class="search-bar" method="GET">
     <input type="text" placeholder="Location/Zip" name="q">
     <input type="button" name="search-button" id="search-button" value="Search">
   </form>
@@ -9,10 +9,12 @@
   {{#each posts as |post| }}
   <li>
     <!-- Corrected href, renamed, and removed contenteditable -->
-    <a href="/posts/{{post.id}}">
+    <a href="/posts/{{post_id}}">
       <h2>{{post.title}}</h2>
       <p>{{post.description}}</p>
     </a>
   </li>
+  {{else}}
+  <li>No posts found.</li>
   {{/each}}
 </ul>
