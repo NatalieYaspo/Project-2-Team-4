@@ -119,8 +119,6 @@ const createImageTag = (publicId, ...colors) => {
 })();
 
 
-
-
 //END CLOUDINARY UTILITIES
 
 // Add express-session and store as Express.js middleware
