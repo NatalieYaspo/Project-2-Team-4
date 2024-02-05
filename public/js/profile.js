@@ -1,16 +1,17 @@
 //Create a new post
 const newFormHandler = async (event) => {
   event.preventDefault();
+  alert('create button clicked');
 
   const title = document.querySelector('#post-title').value.trim();
   const description = document.querySelector('#post-desc').value.trim();
-  const imageURL = document.querySelector('#post-img').value.trim();
+  // const imageURL = document.querySelector('#post-img').value.trim();
 
-  if (title && description && imageURL) {
+  if (title && description) {
     const response = await fetch(`/api/posts`, {
 
       method: 'POST',
-      body: JSON.stringify({ title, description, imageURL}),
+      body: JSON.stringify({ title, description}),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -72,7 +73,7 @@ const delButtonHandler = async (event) => {
     const response = await fetch(`/api/posts/${id}`, {
       method: 'DELETE',
     });
-    console.log(response);
+    // console.log(response);
 
     if (response.ok) {
       document.location.replace('/profile');
