@@ -19,10 +19,10 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false, 
     },
-    // image: {
-    //   type: DataTypes.IMAGE,
-    //   allowNull: true, 
-    // },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true, 
+    },
     likes: {
       type: DataTypes.INTEGER,
       allowNull: true,
