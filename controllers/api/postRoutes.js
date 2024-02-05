@@ -39,6 +39,30 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+// UPDATE a post //NEED TO MAKE WORK
+// router.put('/:id', withAuth, async (req, res) => {
+//   try {
+//     const updatedPostData = await Post.update(
+//       {
+//         ...req.body,
+//         // title: req.body.title,
+//         // content: req.body.content,
+//       }, 
+//       {
+//       where: {
+//         id: req.params.post_id,
+//       },
+//     });
+//     if (!updatedPostData[0]) {
+//       res.status(404).json({ message: 'No postwith this id!' });
+//       return;
+//     }
+//     res.status(200).json(updatedPostData);
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 //Delete a post
 router.delete('/:id', withAuth, async (req, res) => {
   // console.log('req params', req.params.id);

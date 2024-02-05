@@ -26,6 +26,7 @@ const newFormHandler = async (event) => {
   }
 };
 
+//NEED TO MAKE WORK//
 const updateFormHandler = async (event) => {
   event.preventDefault();
   // alert('update button pushed'); //Works!
@@ -37,6 +38,7 @@ const updateFormHandler = async (event) => {
   createNewFormEl.classList.add("hide");
 };
 
+//NEED TO MAKE WORK//
 const updateButtonHandler = async (event) => {
   event.preventDefault();
   alert('update button pushed'); //Works!
@@ -147,10 +149,10 @@ document
   .querySelector('.delete-btn')
   .addEventListener('click', delButtonHandler);
 
-document
-  .querySelector('.update-btn')
-  .addEventListener('click', updateFormHandler);
+// document
+//   .querySelector('.update-btn')
+//   .addEventListener('click', updateFormHandler);
 
-document
-  .querySelector('#submit-update-btn')
-  .addEventListener('click', updateButtonHandler);
+// document
+//   .querySelector('#submit-update-btn')
+//   .addEventListener('click', updateButtonHandler);

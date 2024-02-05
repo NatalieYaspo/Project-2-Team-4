@@ -19,9 +19,13 @@ Post.init(
       type: DataTypes.TEXT,
       allowNull: false, 
     },
+    // image: {
+    //   type: DataTypes.IMAGE,
+    //   allowNull: true, 
+    // },
     likes: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       defaultValue: 0,
     },
     user_id: {
