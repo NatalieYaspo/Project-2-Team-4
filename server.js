@@ -28,12 +28,6 @@ const sess = {
   })
 };
 
-//CLOUDINARY UTILITIES
-
-
-
-//END CLOUDINARY UTILITIES
-
 // Add express-session and store as Express.js middleware
 app.use(session(sess));
 

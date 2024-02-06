@@ -1,7 +1,7 @@
 //Create a new post
 const newFormHandler = async (event) => {
   event.preventDefault();
-  alert('create button clicked');
+  // alert('create button clicked');
 
   const title = document.querySelector('#post-title').value.trim();
   const description = document.querySelector('#post-desc').value.trim();
