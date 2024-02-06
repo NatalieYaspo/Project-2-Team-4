@@ -11,7 +11,7 @@ const newFormHandler = async (event) => {
     const response = await fetch(`/api/posts`, {
 
       method: 'POST',
-      body: JSON.stringify({ title, description}),
+      body: JSON.stringify({ title, description }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -41,7 +41,7 @@ const updateFormHandler = async (event) => {
 //NEED TO MAKE WORK//
 const updateButtonHandler = async (event) => {
   event.preventDefault();
-  alert('update button pushed'); //Works!
+  alert('update button pushed');
 
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
@@ -86,8 +86,8 @@ const delButtonHandler = async (event) => {
 
 //Event Listeners
 document
-  .querySelector('.new-post-form')
-  .addEventListener('submit', newFormHandler);
+  .querySelector('.create-btn')
+  .addEventListener('click', newFormHandler);
 
 document
   .querySelector('.delete-btn')
