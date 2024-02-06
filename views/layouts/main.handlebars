@@ -2,42 +2,51 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Another's Treasure</title>
-  <link rel="shortcut icon" href="/images/anothersTreasureLogo.png">
-  <link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another's Treasure</title>
+    <link rel="shortcut icon" href="/images/anothersTreasureLogo.png">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <header>
-    <h1>
-    <div class="container">
-   <a class="logo" href="/">
-  <img src="/images/anothersTreasureLogo.png" alt="home" style="height: 100px; width: 120px;"> 
-  </a>
-</div>
-    </h1>
+    <header>
+        <div class=" nav-links">
+            <h1>
+                <div class="container">
+                    <a class="logo" href="/">
+                        <img src="/images/anothersTreasureLogo.png" alt="home" style="height: 100px; width: 120px;">
+                    </a>
+                </div>
+            </h1>
 
-    <nav>
-      {{#if logged_in}}
-      <button class="btn" id="logout"><a href="/">logout</a></button>
-      <button class="btn" id="profile"><a href="/profile">profile</a></button>
-      {{else}}
-      <button class="btn" id="login"><a href="/login">login</a></button>
-      {{/if}}
-    </nav>
+            {{!-- <li class="nav-links"><a href="/">login</a></li> --}}
 
-  </header>
-  <main>
-    {{{ body }}}
-  </main>
-  <footer>
 
-  </footer>
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+            <nav>
+                {{#if logged_in}}
+                <button class="nav-links btn " id="logout"><a href="/">logout</a></button>
+                <button class="nav-links btn" id="profile"><a href="/profile">profile</a></button>
+                {{else}}
+                <button class="nav-links btn" id="login"><a href="/login">login</a></button>
+                {{/if}}
+            </nav>
+        </div>
+        </div>
+    </header>
+    <main>
+        {{{ body }}}
+    </main>
+    <footer>
+        <div class="footer-github">
+           <a href="https://github.com/NatalieYaspo/Project-2-Team-4">GitHub</a>
+            <p class="footer-title">Another's Treasure</p>
+        </div>
+    </footer>
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
 
 </body>
 
