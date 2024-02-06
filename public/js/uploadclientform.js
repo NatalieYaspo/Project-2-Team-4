@@ -37,17 +37,17 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const public_id = cloudinaryData.public_id;
                     const version = cloudinaryData.version;
                     const signature = cloudinaryData.signature;
-                    console.log(public_id);
+                    // console.log(public_id);
 
                     // if (public_id && version && signature) {
-                    //     const newImgResponse = await fetch(`/api/posts`, {
-
-                    //         method: 'POST',
-                    //         body: JSON.stringify({ public_id, version, signature }),
-                    //         headers: {
-                    //             'Content-Type': 'application/json',
-                    //           },
-                    //     })
+                    //     const newImgResponse = await 
+                    fetch(`/api/posts`, {
+                            method: 'POST',
+                            body: JSON.stringify({ public_id, version, signature }),
+                            headers: {
+                                'Content-Type': 'application/json',
+                              },
+                        })
                         
                     //     if (newImgResponse.ok) {
                     //         document.location.replace('/profile');

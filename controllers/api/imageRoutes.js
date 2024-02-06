@@ -26,11 +26,12 @@ router.get('/image/:id', withAuth, async (req, res) => {
     }
   });
   
-  //Create a new img //REWORK CODE!
+  // Create a new img //REWORK CODE!
   router.post('/', withAuth, async (req, res) => {
     try {
       const newImage = await Image.create({
-        `https://res.cloudinary.com/${myconfig.cloud_name}/image/upload/w_260,h_200,c_crop,g_north/${public_id}.jpg`,
+       ...req.body,
+       post_id: req.session.post_id,
       });
   
       res.status(200).json(newImage);

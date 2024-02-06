@@ -25,19 +25,19 @@ router.get('/posts/:id', withAuth, async (req, res) => {
   }
 });
 
-//Create new image
-router.post('/', withAuth, async (req, res) => {
-  try {
-    const newImage = await Post.create({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
+// //Create new image
+// router.post('/', withAuth, async (req, res) => {
+//   try {
+//     const newImage = await Post.create({
+//       ...req.body,
+//       user_id: req.session.user_id,
+//     });
 
-    res.status(200).json(newImage);
-  } catch (err) {
-    res.status(400).json(err);
-  }
-});
+//     res.status(200).json(newImage);
+//   } catch (err) {
+//     res.status(400).json(err);
+//   }
+// });
 
 
 //Create a new post
@@ -48,10 +48,26 @@ router.post('/', withAuth, async (req, res) => {
       user_id: req.session.user_id,
     });
 
+    // const newImage = await Post.create({
+    //   ...req.body,
+    //   user_id: req.session.user_id,
+    // });
+
     res.status(200).json(newPost);
   } catch (err) {
     res.status(400).json(err);
   }
+
+  // try {
+  //   const newImage = await Post.create({
+  //     ...req.body,
+  //     user_id: req.session.user_id,
+  //   });
+
+  //   res.status(200).json(newImage);
+  // } catch (err) {
+  //   res.status(400).json(err);
+  // }
 });
 
 // UPDATE a post //NEED TO MAKE WORK
