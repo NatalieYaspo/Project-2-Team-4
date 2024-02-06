@@ -27,7 +27,7 @@ router.get('/image/:id', withAuth, async (req, res) => {
   });
   
   // Create a new img //REWORK CODE!
-  router.post('/', withAuth, async (req, res) => {
+  router.post('/', async (req, res) => {
     try {
       const newImage = await Image.create({
        ...req.body,
@@ -39,3 +39,5 @@ router.get('/image/:id', withAuth, async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+  module.exports = router;

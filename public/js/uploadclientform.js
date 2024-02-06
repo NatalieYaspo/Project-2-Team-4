@@ -1,13 +1,17 @@
 document.addEventListener('DOMContentLoaded', async () => {
+    
 
     const signResponse = await fetch('/api/signuploadform');
     const signData = await signResponse.json();
 
     const url = "https://api.cloudinary.com/v1_1/" + signData.cloudname + "/auto/upload";
-    const form = document.querySelector("form");
+    const form = document.querySelector(".image-form");
+    console.log(form);
 
     form.addEventListener("submit", (e) => {
+        // alert("Loaded and ready!");
         e.preventDefault();
+        // alert("Clicked submit!");
 
         const files = document.querySelector("[type=file]").files;
         const formData = new FormData();
@@ -41,7 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                     // if (public_id && version && signature) {
                     //     const newImgResponse = await 
-                    fetch(`/api/posts`, {
+                    fetch(`/api/images`, {
                             method: 'POST',
                             body: JSON.stringify({ public_id, version, signature }),
                             headers: {
@@ -59,3 +63,5 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 })
+
+
