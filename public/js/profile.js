@@ -86,7 +86,7 @@ const delButtonHandler = async (event) => {
 
 //Event Listeners
 document
-  .querySelector('.new-post-form')
+  .querySelector('.create-btn')
   .addEventListener('submit', newFormHandler);
 
 document
