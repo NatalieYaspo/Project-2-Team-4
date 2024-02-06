@@ -23,18 +23,18 @@ Post.init(
     //   type: DataTypes.STRING,
     //   allowNull: true,
     // },
-    public_id: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    version: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    signature: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // public_id: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // version: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // signature: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
     // likes: {
     //   type: DataTypes.INTEGER,
     //   allowNull: true,

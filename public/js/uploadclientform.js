@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', async () => {
     
-
     const signResponse = await fetch('/api/signuploadform');
     const signData = await signResponse.json();
 
     const url = "https://api.cloudinary.com/v1_1/" + signData.cloudname + "/auto/upload";
     const form = document.querySelector(".image-form");
-    console.log(form);
+    // console.log(form);
 
     form.addEventListener("submit", (e) => {
         // alert("Loaded and ready!");
@@ -35,30 +34,33 @@ document.addEventListener('DOMContentLoaded', async () => {
                     return response.text();
                 })
                 .then(async (data) => {
-                      console.log(JSON.parse(data));
+                    //   console.log(JSON.parse(data));
                     const cloudinaryData = JSON.parse(data);
                     //   console.log(cloudinaryData.public_id);
-                    const public_id = cloudinaryData.public_id;
+                    const url = cloudinaryData.url;
                     const version = cloudinaryData.version;
                     const signature = cloudinaryData.signature;
-                    // console.log(public_id);
+                    // console.log(url);
+                    const element = document.getElementById("myInput");
+                    let post_id = element.classList[0];
+                    // console.log('post_id:', post_id);
 
-                    // if (public_id && version && signature) {
-                    //     const newImgResponse = await 
-                    fetch(`/api/images`, {
+                    if (url && version && signature && post_id) {
+                        const newImgResponse = await fetch(`/api/images`, {
                             method: 'POST',
-                            body: JSON.stringify({ public_id, version, signature }),
+                            body: JSON.stringify({ url, version, signature, post_id }),
                             headers: {
                                 'Content-Type': 'application/json',
                               },
                         })
+                        // console.log(newImgResponse);
                         
-                    //     if (newImgResponse.ok) {
-                    //         document.location.replace('/profile');
-                    //       } else {
-                    //         alert('Failed to create post');
-                    //       }
-                    // }
+                        if (newImgResponse.ok) {
+                            document.location.replace('/profile');
+                          } else {
+                            alert('Failed to create image');
+                          }
+                    }
                 })
         }
     });
