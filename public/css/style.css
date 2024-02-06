@@ -64,7 +64,9 @@ body{
     background-image: url('../images/bulletin-board-325721_1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: fixed;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .hide {
@@ -444,10 +446,11 @@ footer{
     padding: 4px 4px;
     text-align: left;
     background-color: lightgrey;
-    position:relative;
+    position:absolute;
     left: 0;
     bottom: 0;
     width: 100%;
+    margin-top: auto;
 }
 
 .footer-github{
