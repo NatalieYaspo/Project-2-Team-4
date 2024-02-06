@@ -96,11 +96,11 @@ router.post('/', withAuth, async (req, res) => {
 
 //Delete a post
 router.delete('/:id', withAuth, async (req, res) => {
-  // console.log('req params', req.params.id);
+  console.log('req params', req.params.id);
   try {
     const postData = await Post.destroy({
       where: {
-        id: req.params.id,
+        post_id: req.params.id,
         user_id: req.session.user_id,
       },
     });
@@ -113,6 +113,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 
     res.status(200).json(postData);
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
