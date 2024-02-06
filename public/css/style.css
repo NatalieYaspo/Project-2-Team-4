@@ -12,7 +12,51 @@ header{
 
 }
 
+.nav-links{
+    display: flex;
+    align-items: center;
+    background-color: darkgrey;
+    padding: 0px 0px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 10px rgba(33, 33, 33, .7);
+    justify-content: space-between;
+    width: 100%;
 
+}
+
+.nav-links .btn{
+    list-style: none;
+    margin: 0 auto;
+    display: flex;
+    background-color: grey;
+    margin-right: 10px;
+    
+}
+
+
+.nav-links .btn{
+    position: relative;
+    color: lightgray;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+    
+}
+
+.nav-links .btn:before{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: grey;
+    transition: all 0.4s ease;
+}
+
+.nav-links button:hover:before{
+    width:100%
+}
 body{
     margin: 20px auto;
     font-family: 'Lucida Sans';
@@ -20,7 +64,9 @@ body{
     background-image: url('../images/bulletin-board-325721_1280.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: fixed;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 .hide {
@@ -43,6 +89,7 @@ h2{
 h3{
     text-align: center;
     justify-content: center;
+    margin-bottom: 5px;
 }
 
 p{
@@ -104,9 +151,11 @@ ul li a:focus{
 
 }
 
-nav{
-    display: block;
+nav {
+    display: flex;
+    margin: 10px
 }
+
 
 .btn {
     text-align: center;
@@ -161,8 +210,7 @@ body
         margin: auto;
         margin: 20 0 0 450px;
         padding: 80px;
-        background: #343838;
-        border-radius: 15px ;
+
 
 }
 h2.login{
@@ -226,7 +274,6 @@ span{
 }
 a{
     float: right;
-    background-color: grey;
 }
 .container{
     width: 100%;
@@ -341,12 +388,13 @@ a{
     color: #000;
     background: #D4E4BC;
     display: block;
-    height: 40em;
+    height: 35em;
     width: 40em;
     padding: 1em;
     box-shadow: 7px 7px 8px rgba(33, 33, 33, .7);
     margin: auto;
     padding: 10px;
+    text-align: center;
 }
 
 .post-description{
@@ -363,4 +411,55 @@ a{
 
 .anothersTreasure{
     font-size: 40px;
+}
+
+.contact{
+    
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 1px solid transparent;
+    outline: none;
+    color: #1a1a1a;
+    background-color: #aeaeae;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    margin-top: 20px;
+}
+
+.contact a{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-img img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+footer{ 
+    padding: 4px 4px;
+    text-align: left;
+    background-color: lightgrey;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-github{
+    text-align: left;
+    margin-right: 7px;
+}
+
+.footer-title{
+    justify-content: center;
+    text-align: center;
+    align-content: center;
 }
