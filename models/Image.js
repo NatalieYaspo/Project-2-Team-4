@@ -11,7 +11,7 @@ Image.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        public_id: {
+        url: {
             type: DataTypes.STRING,
             allowNull: false,
         },

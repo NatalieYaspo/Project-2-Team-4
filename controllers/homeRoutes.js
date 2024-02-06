@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User } = require('../models'); 
+const { Post, User, Image } = require('../models'); 
 const withAuth = require('../utils/auth');
 
 
@@ -41,11 +41,22 @@ router.get('/posts/:id', withAuth, async (req, res) => {
         },
       ],
     });
+    
+    const imageData = await Image.findOne({
+      where: {
+        image_id: req.params.id
+      }
+    });
+
+    console.log('console log 1')
 
     const post = postData.get({ plain: true }); 
-
+    const image = imageData.get({ plain: true });
+    console.log('console log 2');
+    console.log(post);
     res.render('posts', { 
       ...post,
+      url: image.url,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
